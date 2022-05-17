@@ -56,9 +56,10 @@
             // btnCalc
             // 
             this.btnCalc.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.btnCalc.Location = new System.Drawing.Point(0, 111);
+            this.btnCalc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCalc.Location = new System.Drawing.Point(0, 126);
             this.btnCalc.Name = "btnCalc";
-            this.btnCalc.Size = new System.Drawing.Size(212, 67);
+            this.btnCalc.Size = new System.Drawing.Size(291, 67);
             this.btnCalc.TabIndex = 2;
             this.btnCalc.Text = "Calcular Tempo";
             this.btnCalc.UseVisualStyleBackColor = true;
@@ -86,7 +87,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(212, 178);
+            this.ClientSize = new System.Drawing.Size(291, 193);
             this.Controls.Add(this.mtxtFinalTimer);
             this.Controls.Add(this.mtxtIniTimer);
             this.Controls.Add(this.btnCalc);
