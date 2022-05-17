@@ -61,7 +61,7 @@
             this.btnCalc.Name = "btnCalc";
             this.btnCalc.Size = new System.Drawing.Size(291, 67);
             this.btnCalc.TabIndex = 2;
-            this.btnCalc.Text = "Calcular Tempo";
+            this.btnCalc.Text = "Calcular Intervalo de  Tempo";
             this.btnCalc.UseVisualStyleBackColor = true;
             this.btnCalc.Click += new System.EventHandler(this.btnCalc_Click);
             // 
