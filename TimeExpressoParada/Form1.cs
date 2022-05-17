@@ -11,8 +11,8 @@ namespace TimeExpressoParada
         {
             try
             {
-                TimeSpan intervalo = Convert.ToDateTime(horIniti) - Convert.ToDateTime(horFinal).AddDays(1);
-                MessageBox.Show("Horas:  " + intervalo.Hours.ToString() + " Minutos: " + intervalo.Minutes.ToString());
+                TimeSpan intervalo = Convert.ToDateTime(horFinal).AddDays(1) - Convert.ToDateTime(horIniti);
+                MessageBox.Show("Hora (s): " + intervalo.Hours.ToString() + " e " + intervalo.Minutes.ToString() + " minutos.");
                
             }
             catch (Exception ex)
