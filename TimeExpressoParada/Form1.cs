@@ -13,7 +13,7 @@ namespace TimeExpressoParada
             {
                 TimeSpan intervalo = Convert.ToDateTime(horFinal).AddDays(1) - Convert.ToDateTime(horIniti);
                 MessageBox.Show("Hora (s): " + intervalo.Hours.ToString() + " e " + intervalo.Minutes.ToString() + " minutos.");
-               
+
             }
             catch (Exception ex)
             {
@@ -28,7 +28,7 @@ namespace TimeExpressoParada
 
         private void maskedTextBox1_KeyUp(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter && !String.IsNullOrEmpty(mtxtIniTimer.Text))
+            if (!String.IsNullOrEmpty(mtxtIniTimer.Text) && e.KeyCode == Keys.Enter )
             {
                 mtxtFinalTimer.Focus();
             }
@@ -36,10 +36,19 @@ namespace TimeExpressoParada
 
         private void mtxtFinalTimer_KeyUp(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter && !String.IsNullOrEmpty(mtxtFinalTimer.Text))
+            try
             {
-                btnCalc.Focus();
+                if (e.KeyCode == Keys.Enter && !String.IsNullOrEmpty(mtxtFinalTimer.Text))
+                {
+                    btnCalc_Click(this, null);
+                    mtxtIniTimer.Focus();
+                }
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error !");
+            }
+
         }
 
         private void btnCalc_Click(object sender, EventArgs e)
@@ -49,7 +58,6 @@ namespace TimeExpressoParada
                 CalcularTimer(mtxtIniTimer.Text, mtxtFinalTimer.Text);
                 mtxtIniTimer.Text = "";
                 mtxtFinalTimer.Text = "";
-                mtxtIniTimer.Focus();
             }
             catch (Exception ex)
             {
