@@ -17,7 +17,7 @@ namespace TimeExpressoParada
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Verifique o formato dos dados inseridos");
+                MessageBox.Show("Verifique o formato dos dados inseridos" + ex);
             }
         }
 
@@ -28,7 +28,7 @@ namespace TimeExpressoParada
 
         private void maskedTextBox1_KeyUp(object sender, KeyEventArgs e)
         {
-            if (!String.IsNullOrEmpty(mtxtIniTimer.Text) && e.KeyCode == Keys.Down )
+            if (!String.IsNullOrEmpty(mtxtIniTimer.Text) && e.KeyCode == Keys.Down)
             {
                 mtxtFinalTimer.Focus();
             }
@@ -46,7 +46,7 @@ namespace TimeExpressoParada
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error !");
+                MessageBox.Show("Error !" + ex);
             }
 
         }
@@ -61,7 +61,7 @@ namespace TimeExpressoParada
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error !");
+                MessageBox.Show("Error !" + ex);
             }
         }
     }

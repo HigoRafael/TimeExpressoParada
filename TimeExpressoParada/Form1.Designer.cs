@@ -28,79 +28,78 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.btnCalc = new System.Windows.Forms.Button();
-            this.mtxtIniTimer = new System.Windows.Forms.MaskedTextBox();
-            this.mtxtFinalTimer = new System.Windows.Forms.MaskedTextBox();
-            this.SuspendLayout();
+            label1 = new Label();
+            label2 = new Label();
+            btnCalc = new Button();
+            mtxtIniTimer = new MaskedTextBox();
+            mtxtFinalTimer = new MaskedTextBox();
+            SuspendLayout();
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(50, 30);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(73, 15);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Inicio (start):";
+            label1.AutoSize = true;
+            label1.Location = new Point(84, 30);
+            label1.Name = "label1";
+            label1.Size = new Size(39, 15);
+            label1.TabIndex = 4;
+            label1.Text = "Inicio:";
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 69);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(111, 15);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Termino (terminus):";
+            label2.AutoSize = true;
+            label2.Location = new Point(70, 69);
+            label2.Name = "label2";
+            label2.Size = new Size(53, 15);
+            label2.TabIndex = 1;
+            label2.Text = "Término:";
             // 
             // btnCalc
             // 
-            this.btnCalc.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.btnCalc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCalc.Location = new System.Drawing.Point(0, 126);
-            this.btnCalc.Name = "btnCalc";
-            this.btnCalc.Size = new System.Drawing.Size(291, 67);
-            this.btnCalc.TabIndex = 2;
-            this.btnCalc.Text = "Calcular Intervalo de  Tempo";
-            this.btnCalc.UseVisualStyleBackColor = true;
-            this.btnCalc.Click += new System.EventHandler(this.btnCalc_Click);
+            btnCalc.Dock = DockStyle.Bottom;
+            btnCalc.FlatStyle = FlatStyle.Popup;
+            btnCalc.Location = new Point(0, 106);
+            btnCalc.Name = "btnCalc";
+            btnCalc.Size = new Size(291, 67);
+            btnCalc.TabIndex = 2;
+            btnCalc.Text = "Calcular Intervalo";
+            btnCalc.UseVisualStyleBackColor = true;
+            btnCalc.Click += btnCalc_Click;
             // 
             // mtxtIniTimer
             // 
-            this.mtxtIniTimer.Location = new System.Drawing.Point(129, 22);
-            this.mtxtIniTimer.Mask = "00:00";
-            this.mtxtIniTimer.Name = "mtxtIniTimer";
-            this.mtxtIniTimer.Size = new System.Drawing.Size(46, 23);
-            this.mtxtIniTimer.TabIndex = 0;
-            this.mtxtIniTimer.KeyUp += new System.Windows.Forms.KeyEventHandler(this.maskedTextBox1_KeyUp);
+            mtxtIniTimer.Location = new Point(129, 22);
+            mtxtIniTimer.Mask = "00:00";
+            mtxtIniTimer.Name = "mtxtIniTimer";
+            mtxtIniTimer.Size = new Size(46, 23);
+            mtxtIniTimer.TabIndex = 0;
+            mtxtIniTimer.KeyUp += maskedTextBox1_KeyUp;
             // 
             // mtxtFinalTimer
             // 
-            this.mtxtFinalTimer.Location = new System.Drawing.Point(129, 61);
-            this.mtxtFinalTimer.Mask = "00:00";
-            this.mtxtFinalTimer.Name = "mtxtFinalTimer";
-            this.mtxtFinalTimer.Size = new System.Drawing.Size(46, 23);
-            this.mtxtFinalTimer.TabIndex = 1;
-            this.mtxtFinalTimer.KeyUp += new System.Windows.Forms.KeyEventHandler(this.mtxtFinalTimer_KeyUp);
+            mtxtFinalTimer.Location = new Point(129, 61);
+            mtxtFinalTimer.Mask = "00:00";
+            mtxtFinalTimer.Name = "mtxtFinalTimer";
+            mtxtFinalTimer.Size = new Size(46, 23);
+            mtxtFinalTimer.TabIndex = 1;
+            mtxtFinalTimer.KeyUp += mtxtFinalTimer_KeyUp;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(291, 193);
-            this.Controls.Add(this.mtxtFinalTimer);
-            this.Controls.Add(this.mtxtIniTimer);
-            this.Controls.Add(this.btnCalc);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.MaximizeBox = false;
-            this.Name = "Form1";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Timer Expresso Parada";
-            this.Load += new System.EventHandler(this.Form1_Load);
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(291, 173);
+            Controls.Add(mtxtFinalTimer);
+            Controls.Add(mtxtIniTimer);
+            Controls.Add(btnCalc);
+            Controls.Add(label2);
+            Controls.Add(label1);
+            MaximizeBox = false;
+            Name = "Form1";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Timer Expresso Parada";
+            Load += Form1_Load;
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
