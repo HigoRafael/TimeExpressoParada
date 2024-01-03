@@ -28,7 +28,7 @@ namespace TimeExpressoParada
 
         private void maskedTextBox1_KeyUp(object sender, KeyEventArgs e)
         {
-            if (!String.IsNullOrEmpty(mtxtIniTimer.Text) && e.KeyCode == Keys.Enter )
+            if (!String.IsNullOrEmpty(mtxtIniTimer.Text) && e.KeyCode == Keys.Down )
             {
                 mtxtFinalTimer.Focus();
             }
